@@ -1,0 +1,4 @@
+
+AskTrumpIntent {what do you think of hillary | question}
+AskTrumpIntent {how old are you | question}
+AskTrumpIntent {what is the deal with airplane peanuts | question}

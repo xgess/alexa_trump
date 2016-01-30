@@ -1,0 +1,13 @@
+{
+  "intents": [
+    {
+      "intent": "AskTrumpIntent",
+      "slots": [
+        {
+          "name": "question",
+          "type": "AMAZON.LITERAL"
+        }
+      ]
+    }
+  ]
+}
