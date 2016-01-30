@@ -1,11 +1,8 @@
-from __future__ import print_function
-
 
 def lambda_handler(event, context):
-    print(event)
-
     question = event['request']['intent']['slots']['question']['value']
-    answer = "that sounds youj."
+    answer = "that sounds YOUDJ."
+
     response = {
         "version": "1.0",
         "response": {
