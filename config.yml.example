@@ -15,4 +15,4 @@ lambda:
   runtime: python2.7
   memory_size: 128
   timeout: 3
-  test_data: tests/fixtures/basic_input.json
+  test_data: tests/fixtures/basic_request.json

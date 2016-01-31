@@ -1,0 +1,15 @@
+{
+    "version": "1.0",
+    "response": {
+        "outputSpeech": {
+            "type": "PlainText",
+            "text": "that sounds YOUDJ."
+        },
+        "shouldEndSession": true,
+        "card": {
+            "type": "Simple",
+            "title": "You asked Trump a question!",
+            "content": "whats the deal with airplane peanuts? => that sounds YOUDJ."
+        }
+    }
+}
