@@ -1,0 +1,18 @@
+---
+profile: alexa-dev
+region: us-east-1
+iam:
+  policy:
+    name: ye_lambda_basic_execution_policy
+  role:
+    name: lambda_basic_execution
+lambda:
+  name: trump_magic_8_ball
+  zipfile_name: package.zip
+  description: Trumpisms
+  path: lambda_handler.py
+  handler: lambda_handler.lambda_handler
+  runtime: python2.7
+  memory_size: 128
+  timeout: 3
+  test_data: tests/fixtures/basic_input.json
