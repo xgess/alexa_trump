@@ -2,3 +2,4 @@
 AskTrumpIntent {what do you think of hillary | question}
 AskTrumpIntent {how old are you | question}
 AskTrumpIntent {what is the deal with airplane peanuts | question}
+AskTrumpIntent {should I take a job with my father in law at his shoe store | question}

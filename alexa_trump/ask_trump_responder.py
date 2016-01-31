@@ -1,3 +1,6 @@
+import trump_logic
+
+
 class AskTrumpResponder(object):
     '''Plucks off the user question from the request object,
        passes it along for answering, and formats a proper
@@ -15,7 +18,7 @@ class AskTrumpResponder(object):
 
     def _calculate_answer(self):
         if self._answer is None:
-            self._answer = "that sounds YOUDJ."
+            self._answer = trump_logic.respond_to(self.question)
 
     def _build_response(self):
         return {
