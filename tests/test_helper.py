@@ -24,3 +24,8 @@ def build_response_dict(question, answer):
     response_dict['response']['card']['content'] = card_content
 
     return response_dict
+
+def build_launch_request_dict():
+    with open(os.path.join(FIXTURE_DIRECTORY, 'launch_request.json')) as json_file:
+        request_dict = json.load(json_file)
+    return request_dict

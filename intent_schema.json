@@ -8,6 +8,10 @@
           "type": "AMAZON.LITERAL"
         }
       ]
+    },
+    {
+      "intent": "HelpIntent",
+      "slots": []
     }
   ]
 }
