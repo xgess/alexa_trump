@@ -3,14 +3,14 @@ from mock import patch
 
 import test_helper
 from alexa_trump.ask_trump_responder import AskTrumpResponder
-from alexa_trump import trump_logic
+from alexa_trump.trump_question import TrumpQuestion
 
 
 class TestAskTrumpResponder(unittest.TestCase):
     QUESTION = "what do you think of Ted Cruz?"
     INJECTED_ANSWER = "he is a loser."
 
-    @patch.object(trump_logic, 'respond_to')
+    @patch.object(TrumpQuestion, 'answer')
     def test_properly_formatted_response(self, mock_trump_response):
         mock_trump_response.return_value = self.INJECTED_ANSWER
         request = test_helper.build_request(self.QUESTION)

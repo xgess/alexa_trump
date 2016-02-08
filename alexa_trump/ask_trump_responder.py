@@ -1,4 +1,4 @@
-import trump_logic
+from trump_question import TrumpQuestion
 
 
 class AskTrumpResponder(object):
@@ -13,14 +13,14 @@ class AskTrumpResponder(object):
         self._answer = None
 
     def response(self):
-        self._calculate_answer()
         return self._build_response()
 
     def _calculate_answer(self):
         if self._answer is None:
-            self._answer = trump_logic.respond_to(self.question)
+            self._answer = TrumpQuestion(self.question).answer()
 
     def _build_response(self):
+        self._calculate_answer()
         return {
             "version": "1.0",
             "response": {
