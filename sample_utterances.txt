@@ -1,7 +1,10 @@
 
-AskTrumpIntent {what do you think of hillary | question}
+HelpIntent help
+
 AskTrumpIntent {how old are you | question}
+AskTrumpIntent {why should i trust you|question}
+AskTrumpIntent {what do you think of hillary | question}
+AskTrumpIntent {how do i make my first million dollars|question}
+AskTrumpIntent {what do you think of hillary clinton|question}
 AskTrumpIntent {what is the deal with airplane peanuts | question}
 AskTrumpIntent {should I take a job with my father in law at his shoe store | question}
-
-HelpIntent help
