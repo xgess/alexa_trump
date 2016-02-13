@@ -46,7 +46,8 @@ def always_acceptable(trump_question):
         "I could stand in the middle of fifth avenue and shoot somebody and I wouldn't lose any voters",
         "I have the world's greatest memory. It's one thing everyone agrees on.",
         "Do you mind if I sit back a little, because your breath is very bad.",
-        "I will absolutely apologize sometime in the hopefully distant future if I'm ever wrong."
+        "I will absolutely apologize sometime in the hopefully distant future if I'm ever wrong.",
+        "I'm going to be the greatest jobs creating president that god ever created"
     ])
 
 @TrumpLogicAggregator

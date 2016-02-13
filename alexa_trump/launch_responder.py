@@ -1,6 +1,6 @@
-class HelpResponder(object):
-    TEXT = "Just ask Alexa to Ask Trump your question. " \
-                "Think of it like a magic 8 ball but helpful."
+class LaunchResponder(object):
+    TEXT = "To gain all the wisdom of the Donald, begin " \
+           "by asking a single question. So, how can I help you?"
 
     def response(self):
         return self._build_response()
@@ -13,7 +13,7 @@ class HelpResponder(object):
                     "type": "PlainText",
                     "text": self.TEXT
                 },
-                "shouldEndSession": True,
+                "shouldEndSession": False,
                 "card": {
                     "type": "Simple",
                     "title": "Ask Trump a question!",

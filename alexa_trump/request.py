@@ -14,6 +14,10 @@ class Request(object):
             return self.event['request']['intent']['name']
 
     @property
+    def launch_request(self):
+        return self._type == 'LaunchRequest'
+
+    @property
     def _type(self):
         return self.event['request']['type']
 

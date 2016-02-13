@@ -1,0 +1,15 @@
+{
+    "version": "1.0",
+    "response": {
+        "outputSpeech": {
+            "type": "PlainText",
+            "text": "Just ask Alexa to Ask Trump your question. Think of it like a magic 8 ball but helpful."
+        },
+        "shouldEndSession": true,
+        "card": {
+            "type": "Simple",
+            "title": "Ask Trump a question!",
+            "content": "There's just so much he can help you with."
+        }
+    }
+}
