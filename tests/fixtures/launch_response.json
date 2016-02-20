@@ -5,6 +5,12 @@
             "type": "PlainText",
             "text": "To gain all the wisdom of the Donald, begin by asking a single question. So, how can I help you?"
         },
+        "reprompt": {
+            "outputSpeech": {
+                "type": "PlainText",
+                "text": "for example, try something like, what do you think of ben carson?"
+            }
+        },
         "shouldEndSession": false,
         "card": {
             "type": "Simple",

@@ -1,6 +1,7 @@
 class LaunchResponder(object):
     TEXT = "To gain all the wisdom of the Donald, begin " \
            "by asking a single question. So, how can I help you?"
+    REPROMPT = "for example, try something like, what do you think of ben carson?"
 
     def response(self):
         return self._build_response()
@@ -12,6 +13,12 @@ class LaunchResponder(object):
                 "outputSpeech": {
                     "type": "PlainText",
                     "text": self.TEXT
+                },
+                "reprompt": {
+                    "outputSpeech": {
+                        "type": 'PlainText',
+                        "text": self.REPROMPT
+                    }
                 },
                 "shouldEndSession": False,
                 "card": {

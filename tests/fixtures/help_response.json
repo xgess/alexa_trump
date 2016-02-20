@@ -3,9 +3,15 @@
     "response": {
         "outputSpeech": {
             "type": "PlainText",
-            "text": "Just ask Alexa to Ask Trump your question. Think of it like a magic 8 ball but helpful."
+            "text": "Just ask Alexa to Ask Trump your question. Think of it like a magic 8 ball, but helpful. So, what burning question do you have for donald? Ask it right now."
         },
-        "shouldEndSession": true,
+        "reprompt": {
+            "outputSpeech": {
+                "type": "PlainText",
+                "text": "for example, try something like, what do you think of ben carson?"
+            }
+        },
+        "shouldEndSession": false,
         "card": {
             "type": "Simple",
             "title": "Ask Trump a question!",
