@@ -1,30 +1,18 @@
+from response import Response
+
 class LaunchResponder(object):
-    TEXT = "To gain all the wisdom of the Donald, begin " \
+    SPEECH_TEXT = "To gain all the wisdom of the Donald, begin " \
            "by asking a single question. So, how can I help you?"
     REPROMPT = "for example, try something like, what do you think of ben carson?"
+    CARD_TITLE = "Ask Trump a question!"
+    CARD_CONTENT = "There's just so much he can help you with."
+    END_SESSION = False
 
     def response(self):
-        return self._build_response()
-
-    def _build_response(self):
-        return {
-            "version": "1.0",
-            "response": {
-                "outputSpeech": {
-                    "type": "PlainText",
-                    "text": self.TEXT
-                },
-                "reprompt": {
-                    "outputSpeech": {
-                        "type": 'PlainText',
-                        "text": self.REPROMPT
-                    }
-                },
-                "shouldEndSession": False,
-                "card": {
-                    "type": "Simple",
-                    "title": "Ask Trump a question!",
-                    "content": "There's just so much he can help you with."
-                }
-            }
-        }
+        return Response(
+            speech_text=self.SPEECH_TEXT,
+            reprompt_text=self.REPROMPT,
+            end_session=self.END_SESSION,
+            card_title=self.CARD_TITLE,
+            card_content=self.CARD_CONTENT
+        )

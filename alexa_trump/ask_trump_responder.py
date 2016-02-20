@@ -1,3 +1,4 @@
+from response import Response
 from trump_question import TrumpQuestion
 
 
@@ -12,27 +13,16 @@ class AskTrumpResponder(object):
         self.question = self.request.question
         self._answer = None
 
-    def response(self):
-        return self._build_response()
-
     def _calculate_answer(self):
         if self._answer is None:
             self._answer = TrumpQuestion(self.question).answer()
 
-    def _build_response(self):
+    def response(self):
         self._calculate_answer()
-        return {
-            "version": "1.0",
-            "response": {
-                "outputSpeech": {
-                    "type": "PlainText",
-                    "text": self._answer
-                },
-                "shouldEndSession": True,
-                "card": {
-                    "type": "Simple",
-                    "title": "You asked Trump a question!",
-                    "content": self.question + ' => ' + self._answer
-                }
-            }
-        }
+        return Response(
+            speech_text=self._answer,
+            reprompt_text=None,
+            end_session=True,
+            card_title="You asked Trump a question!",
+            card_content=self.question + ' => ' + self._answer
+        )
