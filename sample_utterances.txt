@@ -1,6 +1,4 @@
 
-HelpIntent help
-
 AskTrumpIntent {how old are you | question}
 AskTrumpIntent {why should i trust you|question}
 AskTrumpIntent {what do you think of hillary | question}

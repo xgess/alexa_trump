@@ -9,4 +9,4 @@ def lambda_handler(event, context):
     request = Request(event)
     responder = request_dispatcher(request)
 
-    return responder.response()
+    return dict(responder.response())

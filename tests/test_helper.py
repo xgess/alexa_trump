@@ -32,6 +32,26 @@ def help_response_dict():
     return _read_fixture_to_dict('help_response.json')
 
 
+def stop_request_dict():
+    return _read_fixture_to_dict('stop_request.json')
+
+def stop_request():
+    return Request(stop_request_dict())
+
+def stop_response_dict():
+    return _read_fixture_to_dict('stop_response.json')
+
+
+def cancel_request_dict():
+    return _read_fixture_to_dict('cancel_request.json')
+
+def cancel_request():
+    return Request(cancel_request_dict())
+
+def cancel_response_dict():
+    return _read_fixture_to_dict('cancel_response.json')
+
+
 def ask_trump_request_dict(question):
     request_dict = _read_fixture_to_dict('ask_trump_request.json')
     request_dict['request']['intent']['slots']['question']['value'] = question

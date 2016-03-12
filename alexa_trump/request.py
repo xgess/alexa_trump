@@ -14,8 +14,12 @@ class Request(object):
             return self.event['request']['intent']['name']
 
     @property
-    def launch_request(self):
+    def is_launch(self):
         return self._type == 'LaunchRequest'
+
+    @property
+    def is_stop_or_cancel(self):
+        return self.intent in ['AMAZON.StopIntent', 'AMAZON.CancelIntent']
 
     @property
     def _type(self):

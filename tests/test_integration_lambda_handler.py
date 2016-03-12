@@ -17,6 +17,8 @@ class TestIntegrationLambdaHandler(unittest.TestCase):
 
     EXPECTED_HELP_RESPONSE = test_helper.help_response_dict()
     EXPECTED_LAUNCH_RESPONSE = test_helper.launch_response_dict()
+    EXPECTED_STOP_RESPONSE = test_helper.stop_response_dict()
+    EXPECTED_CANCEL_RESPONSE = test_helper.cancel_response_dict()
 
     def test_ask_trump_request_response(self):
         event_dict = test_helper.ask_trump_request_dict(self.QUESTION)
@@ -35,3 +37,16 @@ class TestIntegrationLambdaHandler(unittest.TestCase):
         alexa_response = lambda_handler(event=event_dict, context=self.LAMBDA_CONTEXT)
 
         self.assertEqual(alexa_response, self.EXPECTED_LAUNCH_RESPONSE)
+
+    def test_stop_trump_request_response(self):
+        event_dict = test_helper.stop_request_dict()
+        alexa_response = lambda_handler(event=event_dict, context=self.LAMBDA_CONTEXT)
+
+        self.assertEqual(alexa_response, self.EXPECTED_STOP_RESPONSE)
+
+    def test_cancel_trump_request_response(self):
+        event_dict = test_helper.cancel_request_dict()
+
+        alexa_response = lambda_handler(event=event_dict, context=self.LAMBDA_CONTEXT)
+
+        self.assertEqual(alexa_response, self.EXPECTED_CANCEL_RESPONSE)

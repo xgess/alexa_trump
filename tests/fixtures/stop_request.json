@@ -7,15 +7,15 @@
         "user": {
             "userId": "amzn1.echo-sdk-account.AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
         },
-        "new": true
+        "new": false
     },
     "request": {
         "type": "IntentRequest",
         "requestId": "EdwRequestId.99999999-1111-4444-bbbb-888888888888",
         "timestamp": "2016-01-30T19:36:25Z",
         "intent": {
-            "name": "AMAZON.HelpIntent",
-            "slots": {}
+          "name": "AMAZON.StopIntent",
+          "slots": {}
         }
     }
 }

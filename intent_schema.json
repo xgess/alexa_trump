@@ -10,8 +10,13 @@
       ]
     },
     {
-      "intent": "HelpIntent",
-      "slots": []
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
     }
   ]
 }
